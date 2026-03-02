@@ -101,6 +101,30 @@ app.use(paymentMiddleware({
 
 ## Networks
 
+| Network | Chain ID | USDC Address | Status |
+|---------|----------|--------------|--------|
+| Base Sepolia | 84532 | 0x... | Testnet |
+| Base Mainnet | 8453 | 0x833589fCD6eDb6E08F4c7C32D4f71b54bdA02913 | Production |
+
+### Base Mainnet Deployment
+
+For production on Base mainnet:
+
+1. **Get USDC on Base:**
+   - Bridge from Ethereum: https://bridge.base.org
+   - Buy directly on Base: https://coinbase.com/buy-usdc
+
+2. **Update payment settings:**
+   ```bash
+   export PAY_TO_ADDRESS=0xYOUR_MAINNET_WALLET
+   # Network is automatically detected from chain
+   ```
+
+3. **Production considerations:**
+   - Use a permanent wallet address (not a hot wallet)
+   - Consider using a multisig for large amounts
+   - Monitor payments via BaseScan
+
 ## Deployment
 
 ### Render / Railway / Fly.io
