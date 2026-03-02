@@ -127,6 +127,27 @@ For production on Base mainnet:
 
 ## Deployment
 
+### Prerequisites
+- GitHub account
+- Platform account (Railway, Render, or Vercel)
+
+### Authentication Required
+
+Before deploying, you need to authenticate:
+
+**Railway:**
+```bash
+railway login
+railway init
+```
+
+**Vercel:**
+```bash
+vercel login
+```
+
+Then deploy:
+
 ### Render / Railway / Fly.io
 
 1. Connect repo or push to GitHub
