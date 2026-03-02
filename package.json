@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "deploy": "echo 'Deploy to Base: vercel deploy --prod or similar'"
+    "deploy": "vercel --prod",
+    "deploy:staging": "vercel",
+    "dev": "node server.js"
   },
   "keywords": [
     "x402",
