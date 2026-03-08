@@ -48,7 +48,7 @@ curl -H "x402-signature: 0x..." http://localhost:3000/api/data
 |----------|---------|-------------|
 | `PAY_TO_ADDRESS` | `0x0...` | Wallet address to receive payments |
 | `PORT` | `3000` | Server port |
-| `FACILITATOR_URL` | `https://facilitator.x402.dev` | Payment facilitator (for full x402) |
+| `FACILITATOR_URL` | `https://api.cdp.coinbase.com/platform/v2/x402` | Payment facilitator (for full x402) |
 
 ## Production Use
 
@@ -94,7 +94,7 @@ For real payments with facilitator verification:
 const { paymentMiddleware } = require('@x402/express');
 
 app.use(paymentMiddleware({
-  facilitator: 'https://facilitator.x402.dev',
+  facilitator: 'https://api.cdp.coinbase.com/platform/v2/x402',
   payTo: process.env.PAY_TO_ADDRESS
 }));
 ```
